@@ -33,7 +33,7 @@ class policy_model(nn.Module):
         # state_policy = torch.FloatTensor(state_policy.astype(np.float32)).to(self.device) # 将state_policy从NumPy数组转换为PyTorch张量，并将其数据类型设置为32位浮点数
         # state_policy = state_policy.view(1, self.size) #对state_policy进行形状变换，将其视图更改为1行self.size列的矩阵
 
-        state_policy = torch.FloatTensor(state_policy.astype(np.float32))
+        state_policy = torch.FloatTensor(state_policy.astype(np.float32)).to(self.device)
         # print("hellohello")
         # print(state_policy)
 
@@ -70,7 +70,7 @@ class value_model(nn.Module):
         # state = torch.FloatTensor(state.astype(np.float32)).to(self.device)
         # state = state.view(1, self.size)
 
-        state = torch.FloatTensor(state.astype(np.float32))
+        state = torch.FloatTensor(state.astype(np.float32)).to(self.device)
         state = state.view(1, self.feature_size)
         self.eval()
 

@@ -1,62 +1,74 @@
 import os
 
 import torch
-import mmverify
-
+from Lean4Gym import Lean4Gym, ProofState
 from model import policy_model
 from model import value_model
 from trainer import Trainer
 from mcts import Node
 from mcts import MCTS
-from verify import anatomy
 
-
-device = torch.device('cpu') 
+device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu') 
 
 args = {
-    'batch_size': 20,
+    'batch_size': 64,
     'numIters': 20,                                # Total number of training iterations
     'num_simulations': 100,                         # Total number of MCTS simulations to run when deciding on a move to play
     'numEps': 5,                                  # Number of full games (episodes) to run during each iteration
     'numItersForTrainExamplesHistory': 20,
-    'epochs': 15,                                    # Number of epochs of training per iteration
+    'epochs': 1000,                                    # Number of epochs of training per iteration
     'checkpoint_path': 'latest.pth',                 # location to save latest set of weights
-    'TACRIC_NUMBER': 5,
+    'TACRIC_NUMBER': 8,
     'feature_size':100,
     'max_count': 40
     # 'MAX_ROUND_NUMBER' : 10
 }
 
 
-policyModel = policy_model(args['feature_size']*2, device)
-valueModel = value_model(args['feature_size'], device)
+policyModel = policy_model(args['feature_size']*2, device).to(device)
+valueModel = value_model(args['feature_size'], device).to(device)
+
+state_list = []
+lean_list = []
+
+time_out = 600
+
+def list_files(directory):
+    filelist = []
+    for file in os.listdir(directory):
+        if os.path.isfile(os.path.join(directory, file)):
+            print(file)
+            filelist.append(file)
+    return filelist
 
 
-axiom_file = "./data/axioms.json"
-symbol_file = "./data/symbols.json"
-anatomy(axiom_file,symbol_file)
-verbosity = 30
-# filename='data/anatomy.mm'
-filename='Declare.mm'
+#待证明策略：
+lean_dir = "/home2/wanglei/Project/testfolder/succ"
+# lean_dir = "/home2/wanglei/Project/testfolder"
+file_list = list_files(lean_dir)
+# print(len(file_list))
 
-# 假设这里的mm文件 没有证明序列，没有要证明的断言，只读入声明 (文件最后一个字符是 $=),
-mm = mmverify.MM(None,None)
-f_hyps,e_hyps = mm.calculate_and_verify_metamath(filename,def_verbosity=verbosity,def_only_calculate=True) #只使用计算功能
-step_int = 0
-state = []
-step = ''
-# 先调用一遍，初始化标签
-correct_flag,state = mm.verify_and_calculate_proof_step_normal(f_hyps,e_hyps,step,state,step_int)  
+lean_workdir = "/home2/wanglei/Project" # Lean工程的根目录
+for i, file in enumerate(file_list):
+    print("============================================")
+    lean_file = "testfolder/succ/" + file  # 待证明定理的Lean文件
+   
+    print("证明定理为:{}".format(file))
+    lean = Lean4Gym(lean_workdir, lean_file)
+    try:
+        state = lean.getInitState()
+    except:
+        print("状态异常")
+        continue
+    
+    state_list.append(state)
+    lean_list.append(lean)
 
-# start = timeit.default_timer()
-# print("第一次搜索策略")
-# mcts = MCTS(current_node, policyModel, valueModel, args, device)
-# node = mcts.runmcts(lean)
-# end = timeit.default_timer()
-# print ("第一次时间：{}".format(str(end-start)))
 
 
 trainer = Trainer(policyModel, valueModel, args, device)
 print("马上开始训练")
-trainer.learn(state, mm, f_hyps, e_hyps,axiom_file,symbol_file)
+trainer.learn(state_list, lean_list)
+
+# trainer.train()
 

@@ -12,7 +12,7 @@ import json
 # feature_size = 100
 
 def encode_state(state, feature_size):
-    state = str([str(sublist) for sublist in state])
+    # state = str([str(sublist) for sublist in state])
     encode_state = [ord(char) for char in state]
     if(len(encode_state)<=feature_size):
         encode_state += [0]*(feature_size-len(encode_state))  #list
@@ -23,7 +23,7 @@ def encode_state(state, feature_size):
     return encode_state
 
 def encode_tactic(tactic,feature_size):
-    tactic = str([str(sublist) for sublist in tactic])
+    # tactic = str([str(sublist) for sublist in tactic])
     encode_tactic = [ord(char) for char in tactic]
     if(len(encode_tactic)<=feature_size):
         encode_tactic += [0]*(feature_size-len(encode_tactic))
@@ -43,20 +43,18 @@ class Trainer:
         # self.mcts = MCTS(node, self.policy_model, self.value_model, self.args)
 
 
-    def exceute_episode(self, root,tac_num): # 返回当前搜索树大步路径上 所有 点的 概率、奖励、状态、策略 作为训练样本
+    def exceute_episode(self, root): # 返回当前搜索树大步路径上 所有 点的 概率、奖励、状态、策略 作为训练样本
         # print("开始采样")
         policy_examples = []
         value_examples = []
-        # state = self.game.get_init_board()
         node = root
         state = node.state
 
         while True:  #循环一次是往下走一个节点，探索大步节点路径，直到证明结束（成功或失败），每一次选择孩子节点中价值最高的策略，并计算其选择概率，再将其状态和策略全部放入样本列表
-            # canonical_board = self.game.get_canonical_board(state, current_player)
             max_times = 0
             max_i = 0
             finish = 0
-            action_probs = [0 for _ in range(tac_num)]
+            action_probs = [0 for _ in range(self.args['TACRIC_NUMBER'])]
             for index, children_node in enumerate(node.children):
                 action_probs[index] = children_node.visit_times  
                 
@@ -73,7 +71,7 @@ class Trainer:
             if(np.sum(action_probs)!=0):
                 action_probs = action_probs / np.sum(action_probs)  #计算每个节点的概率值，当前节点node暂时没有子节点时，即[0,0,0,0]时，会报错
 
-            encodestate = encode_state(state, self.args['feature_size'])
+            encodestate = encode_state(state.getTacticState(), self.args['feature_size'])
             
             for index, children_node in enumerate(node.children):  #记录每个大步节点node的所有策略的概率，放入train_examples
                 encodetactic = encode_tactic(children_node.tac, self.args['feature_size'])
@@ -82,7 +80,7 @@ class Trainer:
                 
                 children_state = children_node.state
                 #########################################
-                children_encodestate = encode_state(children_state, self.args['feature_size'])
+                children_encodestate = encode_state(children_state.getTacticState(), self.args['feature_size'])
                 #############################################
                 reward = children_node.compute_reward()  #当前节点的价值
                 reward0 = reward
@@ -118,48 +116,50 @@ class Trainer:
                 return policy, value
 
 
-    def learn(self, state, mm, f_hyps, e_hyps,axiom_file,symbol_file): 
+    def learn(self, state_list, lean_list): 
         # print("训练开始啦")s
         policy_train_example = []
         value_train_example = []
-        
-        for i in range(1, self.args['numIters'] + 1):  # 第i次训练
-            print("{}/{}".format(i, self.args['numIters']))
+        for index, state in enumerate(state_list):
+            for i in range(1, self.args['numIters'] + 1):  # 第i次训练
+                print("{}/{}".format(i, self.args['numIters']))
+                
+                count = 0
+                # node_ = copy.copy(node)
+                node = Node(state)
             
-            count = 0
-            # node_ = copy.copy(node)
-            node = Node(state)
-        
-            for j in range (self.args['numEps']): #对该证明目标训练的循环迭代次数，迭代一次，生成一棵搜索树，当迭代次数% b = 0， 则采样当前搜索树的大步节点，执行下列步骤 
-                # print("第{}轮".format(j))
-                self.mcts = MCTS(node, self.policy_model, self.value_model, self.args, self.device)
-                # root = self.mcts.run()
-                # print(node.state)
-                node, tac_num = self.mcts.run( mm, f_hyps, e_hyps, str(i)+str(j),axiom_file,symbol_file)
-                count += 1
+                for j in range (self.args['numEps']): #对该证明目标训练的循环迭代次数，迭代一次，生成一棵搜索树，当迭代次数% b = 0， 则采样当前搜索树的大步节点，执行下列步骤 
+                    # print("第{}轮".format(j))
+                    self.mcts = MCTS(node, self.policy_model, self.value_model, self.args, self.device)
+                    # root = self.mcts.run()
+                    # print(node.state)
+                    node = self.mcts.run(lean_list[index])
+                    count += 1
 
-                if(count % 5 == 0):
-                # 如果迭代次数 % b = 0， 则采样，执行下列步骤 
-                    # print("采样一次")
-                    policy_train_examples, value_train_examples = self.exceute_episode(node,tac_num)  # 都是列表，返回大步节点所构成的一条路径上所有样本数据。采样所有大步节点路径上的节点，每次循环返回一个训练样本，即一对（状态、策略）对 和 一个状态，及其相应的概率和价值
-                    policy_train_example.extend(policy_train_examples)
-                    value_train_example.extend(value_train_examples)
+                    if(count % 5 == 0):
+                    # 如果迭代次数 % b = 0， 则采样，执行下列步骤 
+                        # print("采样一次")
+                        policy_train_examples, value_train_examples = self.exceute_episode(node)  # 都是列表，返回大步节点所构成的一条路径上所有样本数据。采样所有大步节点路径上的节点，每次循环返回一个训练样本，即一对（状态、策略）对 和 一个状态，及其相应的概率和价值
+                        policy_train_example.extend(policy_train_examples)
+                        value_train_example.extend(value_train_examples)
         
         shuffle(policy_train_example)
         shuffle(value_train_example)
-        self.train(policy_train_example,value_train_example)
-        # with open('policy_train_example.pickle', 'wb') as f:
-        #     pickle.dump(policy_train_example, f)
-        # with open('value_train_example.pickle', 'wb') as f:
-        #     pickle.dump(value_train_example, f)
+
+        with open('policy_train_example.pickle', 'wb') as f:
+            pickle.dump(policy_train_example, f)
+        with open('value_train_example.pickle', 'wb') as f:
+            pickle.dump(value_train_example, f)
+            
+        self.train()
         return
             
-    def train(self,policy_train_example,value_train_example):
+    def train(self):
         # print("xunlian")
-        # with open('policy_train_example.pickle', 'rb') as f:
-        #     policy_train_example = pickle.load(f)
-        # with open('value_train_example.pickle', 'rb') as f:
-        #     value_train_example = pickle.load(f)
+        with open('policy_train_example.pickle', 'rb') as f:
+            policy_train_example = pickle.load(f)
+        with open('value_train_example.pickle', 'rb') as f:
+            value_train_example = pickle.load(f)
         self.policy_train(policy_train_example)  # 每次训练样本：当前mcts树中，numEps/10条大步节点路径上所有节点
         self.value_train(value_train_example)
         # filename = self.args['checkpoint_path']

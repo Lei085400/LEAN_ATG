@@ -1,13 +1,11 @@
-
+import time
+import timeit
+from multiprocessing import Pool
+import multiprocessing as mp
 import os
 
 import torch
-import pickle
-import subprocess
 
-import timeit
-import select
-import json
 from Lean4Gym import Lean4Gym, ProofState
 # print(torch.__version__)
 from torch.nn.parallel import DataParallel  
@@ -44,6 +42,15 @@ args = {
 }
 
 
+def list_files(directory):
+    filelist = []
+    for file in os.listdir(directory):
+        if os.path.isfile(os.path.join(directory, file)):
+            print(file)
+            filelist.append(file)
+    return filelist
+
+
 state_list = []
 lean_list = []
 
@@ -63,50 +70,36 @@ policyModel.load_state_dict(checkpoint_policy['state_dict'])
 checkpoint_value = torch.load("/home/wanglei/AAAI/lean_ATG/leanproject/ATG/value_model")
 valueModel.load_state_dict(checkpoint_value['state_dict'])
 
-def list_files(directory):
-    filelist = []
-    for file in os.listdir(directory):
-        if os.path.isfile(os.path.join(directory, file)):
-            print(file)
-            filelist.append(file)
-    return filelist
 
 count = 0
 new_theorems = []
 
 #待证明策略：
-lean_dir = "/home/wanglei/AAAI/lean_ATG/leanproject/testfolder/succ"
+lean_dir = "/home/wanglei/Project/testfolder/succ"
 # lean_dir = "/home2/wanglei/Project/testfolder"
 file_list = list_files(lean_dir)
 # print(len(file_list))
 
 lean_workdir = "/home/wanglei/AAAI/lean_ATG/leanproject" # Lean工程的根目录
 
-for i, file in enumerate(file_list):
-    print("============================================")
-    lean_file = "testfolder/succ/" + file  # 待证明定理的Lean文件
-   
-    print("证明定理为:{}".format(file))
-    lean = Lean4Gym(lean_workdir, lean_file)
-    try:
-        state = lean.getInitState()
-    except:
-        print("状态异常")
-        continue
 
-    node = Node(state)
+def long_time_task(name):
+    print(new)
 
-    print("开始搜索策略")
-    mcts = MCTS(node, policyModel, valueModel, args, device)
-    outputs = mcts.runmcts(lean, time_out)
-    new_theorems.extend(outputs)
-        
-    print("第{}个定理".format(str(i)))
-    print("找到{}条新定理".format(str(len(new_theorems))))
-    
-print("新定理总数：{}".format(str(len(new_theorems))))
 
-F = open(r'/home/wanglei/AAAI/lean_ATG/leanproject/ATG/new_theorems.txt','w')
-for theorem in new_theorems:
-    F.write(theorem +'\n')
-F.close() 
+if __name__ == '__main__':
+    print(mp.cpu_count())
+    pool = Pool(processes=mp.cpu_count() // 2)
+    t1 = timeit.default_timer()
+    res = pool.map(long_time_task, s)
+    t2 = timeit.default_timer()
+    print(t2 - t1)
+    pool.close()
+    pool.join()
+    print(res)
+
+    t3 = timeit.default_timer()
+    for i in range(10):
+        long_time_task(s[i])
+    t4 = timeit.default_timer()
+    print(t4 - t3)
