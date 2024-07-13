@@ -403,7 +403,7 @@ class MCTS:
 
     def run(self, lean):
       node =  self.node
-      computation_budget = 5000
+      computation_budget = 1000
       
       # Run as much as possible under the computation budget
       for i in range(computation_budget):
