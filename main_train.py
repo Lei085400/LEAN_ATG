@@ -11,12 +11,12 @@ from mcts import MCTS
 device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu') 
 
 args = {
-    'batch_size': 64,
+    'batch_size': 20,
     'numIters': 20,                                # Total number of training iterations
     'num_simulations': 100,                         # Total number of MCTS simulations to run when deciding on a move to play
     'numEps': 5,                                  # Number of full games (episodes) to run during each iteration
     'numItersForTrainExamplesHistory': 20,
-    'epochs': 1000,                                    # Number of epochs of training per iteration
+    'epochs': 15,                                    # Number of epochs of training per iteration
     'checkpoint_path': 'latest.pth',                 # location to save latest set of weights
     'TACRIC_NUMBER': 8,
     'feature_size':100,
@@ -43,12 +43,12 @@ def list_files(directory):
 
 
 #待证明策略：
-lean_dir = "/home2/wanglei/Project/testfolder/succ"
+lean_dir = "/home/wanglei/AAAI/lean_ATG/leanproject/testfolder/succ"
 # lean_dir = "/home2/wanglei/Project/testfolder"
 file_list = list_files(lean_dir)
 # print(len(file_list))
 
-lean_workdir = "/home2/wanglei/Project" # Lean工程的根目录
+lean_workdir = "/home/wanglei/AAAI/lean_ATG/leanproject" # Lean工程的根目录
 for i, file in enumerate(file_list):
     print("============================================")
     lean_file = "testfolder/succ/" + file  # 待证明定理的Lean文件

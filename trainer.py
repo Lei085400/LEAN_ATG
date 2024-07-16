@@ -9,10 +9,13 @@ from mcts import MCTS
 from mcts import Node
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM
 import json
+from tqdm import trange
 # feature_size = 100
 
 def encode_state(state, feature_size):
     # state = str([str(sublist) for sublist in state])
+    if(state is None):
+        state = "None"
     encode_state = [ord(char) for char in state]
     if(len(encode_state)<=feature_size):
         encode_state += [0]*(feature_size-len(encode_state))  #list
@@ -57,11 +60,6 @@ class Trainer:
             action_probs = [0 for _ in range(self.args['TACRIC_NUMBER'])]
             for index, children_node in enumerate(node.children):
                 action_probs[index] = children_node.visit_times  
-                
-                if(children_node.flag == False):
-                    action_probs[index] = 0
-                if(children_node.new == True):
-                    action_probs[index] = 1
                     
                 if(action_probs[index] > max_times): # 找到当前节点中概率最大(访问次数最多)的子节点
                     max_times = action_probs[index]
@@ -71,6 +69,13 @@ class Trainer:
             if(np.sum(action_probs)!=0):
                 action_probs = action_probs / np.sum(action_probs)  #计算每个节点的概率值，当前节点node暂时没有子节点时，即[0,0,0,0]时，会报错
 
+            if(children_node.flag == False):
+                action_probs[index] = 0
+            if(children_node.new == True):
+                action_probs[index] = 1
+                max_i = index
+                max_times = 1
+                    
             encodestate = encode_state(state.getTacticState(), self.args['feature_size'])
             
             for index, children_node in enumerate(node.children):  #记录每个大步节点node的所有策略的概率，放入train_examples
@@ -172,7 +177,7 @@ class Trainer:
         optimizer = optim.Adam(self.policy_model.parameters(), lr=5e-4)
         pi_losses = []
 
-        for epoch in range(self.args['epochs']):
+        for epoch in trange(self.args['epochs']):
             self.policy_model.train()
 
             batch_idx = 0
@@ -212,12 +217,12 @@ class Trainer:
         optimizer = optim.Adam(self.value_model.parameters(), lr=5e-4)
         v_losses = []
 
-        for epoch in range(self.args['epochs']):
+        for epoch in trange(self.args['epochs']):
             self.value_model.train()
 
             batch_idx = 0
 
-            while batch_idx < int(len(examples) / 10):
+            while batch_idx < int(len(examples) / self.args['batch_size']):
                 # sample_ids = np.random.randint(len(examples), size=self.args['batch_size'])
                 # boards, vs = list(zip(*[examples[i] for i in sample_ids]))
                 # boards = torch.FloatTensor(np.array(boards).astype(np.float64))

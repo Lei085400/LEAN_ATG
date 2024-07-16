@@ -31,15 +31,16 @@ device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('
 
 args = {
     
-    'batch_size': 4,
-    'numIters': 10,                                # Total number of training iterations
+    'batch_size': 10,
+    'numIters': 1,                                # Total number of training iterations
     'num_simulations': 100,                         # Total number of MCTS simulations to run when deciding on a move to play
-    'numEps': 20,                                  # Number of full games (episodes) to run during each iteration
+    'numEps': 50,                                  # Number of full games (episodes) to run during each iteration
     'numItersForTrainExamplesHistory': 20,
-    'epochs': 10,                                    # Number of epochs of training per iteration
+    'epochs': 15,                                    # Number of epochs of training per iteration
     'checkpoint_path': 'latest.pth',                 # location to save latest set of weights
     'TACRIC_NUMBER': 8,
-    'feature_size':100
+    'feature_size':100,
+    'max_count': 100
     # 'MAX_ROUND_NUMBER' : 10
 }
 
@@ -81,7 +82,6 @@ file_list = list_files(lean_dir)
 # print(len(file_list))
 
 lean_workdir = "/home/wanglei/AAAI/lean_ATG/leanproject" # Lean工程的根目录
-
 for i, file in enumerate(file_list):
     print("============================================")
     lean_file = "testfolder/succ/" + file  # 待证明定理的Lean文件

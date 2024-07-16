@@ -104,3 +104,8 @@ example(a b c:Nat):b + (c + a) = a + (c + b):=by
 theorem sub_add_cancel''' {n m : Nat} (h : m ≤ n) : n - m + m = n := by
   rw [Nat.add_comm]
   rw [Nat.add_sub_of_le h]
+
+example{n m : Nat} (h : m ≤ n): m + (n - m) = n := by
+  have sub_add_cancell: n - m + m = n := by rw[sub_add_cancel''' h]
+  rw[Nat.add_comm] at sub_add_cancell
+  rw[Nat.add_sub_of_le h]

@@ -1,0 +1,2119 @@
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ (∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k)) * -1 =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -1 * ∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n x✝ : ℕ
+a✝ : x✝ ∈ range (n + 1)
+⊢ -1 * ((↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)) = -(↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n x✝ : ℕ
+a✝ : x✝ ∈ range (n + 1)
+⊢ -1 * ((↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)) = -(↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x < n + 1, -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+no goals
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n x✝ : ℕ
+a✝ : x✝ ∈ range (n + 1)
+⊢ -1 * ((↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)) = -(↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x : ℕ
+hx : x < n + 1
+⊢ -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ (∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k)) * -1 =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -1 * ∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ k in range (n + 1), (↑k - ↑n) * ↑(Nat.choose (2 * n) k) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑y - ↑n) * ↑(Nat.choose (2 * n) y)) = -(↑y - ↑n) * ↑(Nat.choose (2 * n) y)
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ -1 * ((↑k - ↑n) * ↑(Nat.choose (2 * n) k)) = -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = -(↑x - ↑n) * ↑(Nat.choose (2 * n) x)
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) =
+    ∑ k in range (n + 1), -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑x - ↑n) * ↑(Nat.choose (2 * n) x))) = fun k => -(↑k - ↑n) * ↑(Nat.choose (2 * n) k)
+n : ℕ
+⊢ -∑ x in range (n + 1), (↑x - ↑n) * ↑(Nat.choose (2 * n) x) = ∑ x in range (n + 1), (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n x✝ : ℕ
+a✝ : x✝ < n + 1
+⊢ -((↑x✝ - ↑n) * ↑(Nat.choose (2 * n) x✝)) = (↑n - ↑x✝) * ↑(Nat.choose (2 * n) x✝)
+n x : ℕ
+⊢ x < n + 1 → -((↑x - ↑n) * ↑(Nat.choose (2 * n) x)) = (↑n - ↑x) * ↑(Nat.choose (2 * n) x)
+n i : ℕ
+⊢ i < n + 1 → -((↑i - ↑n) * ↑(Nat.choose (2 * n) i)) = (↑n - ↑i) * ↑(Nat.choose (2 * n) i)
+case e_a
+n : ℕ
+⊢ ∑ k in range (n + 1), (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) =
+    ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+no goals
+case e_a.e_f
+n : ℕ
+⊢ (fun k => (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k))) = fun k =>
+    (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ (↑n - ↑y - ↑n) * ↑(Nat.choose (2 * n) (n - y)) = (↑n + 1 - 1 - ↑y - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - y))
+case e_a
+n k : ℕ
+x✝ : k ∈ range (n + 1)
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a
+n k : ℕ
+h : k ∈ range (n + 1)
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+case e_a
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+case e_a.e_f
+n : ℕ
+⊢ (fun k => (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k))) = fun k =>
+    (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+no goals
+case e_a.e_a
+n k : ℕ
+hk : k ∈ range (n + 1)
+⊢ ↑n - ↑k - ↑n = ↑n + 1 - 1 - ↑k - ↑n
+case e_a
+n k : ℕ
+hk : k ≤ n
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    ∑ x in range (n + 1), -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n : ℕ
+⊢ Finset.sum (range (n + 1)) ?m.91164 =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) = ?m.91164 x
+
+n : ℕ
+⊢ ℕ → ℝ
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    ∑ x in range (n + 1), -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n : ℕ
+⊢ -1 * ∑ x in range (n + 1), (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+no goals
+no goals
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n m : ℕ
+hm : m ∈ range (n + 1)
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + 1 - 1 - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ (↑n - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n - i)) = (↑n + 1 - 1 - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - i))
+n x✝ : ℕ
+a✝ : x✝ ∈ range (n + 1)
+⊢ (↑n - ↑x✝ - ↑n) * ↑(Nat.choose (2 * n) (n - x✝)) = (↑n + 1 - 1 - ↑x✝ - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x✝))
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + 1 - 1 - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+no goals
+case e_a.e_f.h
+n k : ℕ
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a.e_f
+n : ℕ
+⊢ (fun k => (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k))) = fun k =>
+    (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a.e_f.h
+n k : ℕ
+⊢ (↑n - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n - k)) = (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+case e_a.e_a
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ ↑n - ↑y - ↑n = ↑n + 1 - 1 - ↑y - ↑n
+case e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n - ↑x - ↑n = ↑n + 1 - 1 - ↑x - ↑n
+n x : ℕ
+hx : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x < n + 1
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + (1 - 1) - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+no goals
+case e_a.e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n - ↑x = ↑n + 1 - 1 - ↑x
+case e_a.e_a.e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+case e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n - ↑x - ↑n = ↑n + 1 - 1 - ↑x - ↑n
+n x : ℕ
+hx : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x < n + 1
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + (1 - 1) - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+no goals
+case e_a.e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n - ↑x = ↑n + 1 - 1 - ↑x
+case e_a.e_a.e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+case e_a
+n m : ℕ
+hm : m ∈ range (n + 1)
+⊢ ↑n - ↑m - ↑n = ↑n + 1 - 1 - ↑m - ↑n
+n m : ℕ
+hm : m < n + 1
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + 1 - 1 - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+n m : ℕ
+hm : m ∈ range (n + 1)
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + (1 - 1) - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+no goals
+case e_a
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ ↑n - ↑i - ↑n = ↑n + 1 - 1 - ↑i - ↑n
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ (↑n - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n - i)) = (↑n + (1 - 1) - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - i))
+no goals
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ (↑n - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n - i)) = (↑n + 1 - 1 - ↑i - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - (1 + i)))
+case e_a.e_a
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ ↑n - ↑i = ↑n + 1 - 1 - ↑i
+case e_a.e_a.e_a
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+case e_a.e_a.e_a
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+n i : ℕ
+a✝ : i ∈ range (n + 1)
+⊢ -(↑i * ↑(Nat.choose (n * 2) (n - i))) = -(↑i * ↑(Nat.choose (n * 2) (1 + n - 1 - i)))
+case e_a
+n x✝ : ℕ
+a✝ : x✝ ∈ range (n + 1)
+⊢ ↑n - ↑x✝ - ↑n = ↑n + 1 - 1 - ↑x✝ - ↑n
+case e_a
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ ↑n - ↑x - ↑n = ↑n + 1 - 1 - ↑x - ↑n
+n x : ℕ
+h : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+h : x ≤ n
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+h : x < n + 1
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + (1 - 1) - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+no goals
+case e_a.e_a
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ ↑n - ↑x = ↑n + 1 - 1 - ↑x
+case e_a.e_a.e_a
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+case e_a
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ ↑n - ↑m - ↑n = ↑n + 1 - 1 - ↑m - ↑n
+n m : ℕ
+h : m < n + 1
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + 1 - 1 - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + (1 - 1) - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - m))
+no goals
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ (↑n - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n - m)) = (↑n + 1 - 1 - ↑m - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - (1 + m)))
+no goals
+case e_a.e_a
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ ↑n - ↑m = ↑n + 1 - 1 - ↑m
+case e_a.e_a.e_a
+n m : ℕ
+h : m ∈ range (n + 1)
+⊢ ↑n = ↑n + 1 - 1
+case e_a
+n x : ℕ
+hx : x ≤ n
+⊢ ↑n - ↑x - ↑n = ↑n + 1 - 1 - ↑x - ↑n
+case e_a
+n x : ℕ
+hx : x ≤ n
+⊢ ↑n - ↑x - ↑n = ↑n + 1 - 1 - ↑x - ↑n
+case e_a.e_a
+n k : ℕ
+x✝ : k ∈ range (n + 1)
+⊢ ↑n - ↑k - ↑n = ↑n + 1 - 1 - ↑k - ↑n
+n : ℕ
+⊢ ∑ x in range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+no goals
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n x : ℕ
+x✝ : x ∈ range (n + 1)
+⊢ -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n x : ℕ
+⊢ x ∈ range (n + 1) →
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n : ℕ
+⊢ ∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+      ∑ x in range 1, (↑n + 1 - 1 - ↑(n + x) - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - (n + x))) =
+    -1 *
+      (∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+        ∑ x in range 1, (↑n + 1 - 1 - ↑(n + x) - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - (n + x))))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n : ℕ
+⊢ ∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+      (↑n + 1 - 1 - ↑n - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - n)) =
+    -1 *
+      (∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+        (↑n + 1 - 1 - ↑n - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - n)))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n y : ℕ
+x✝ : y ∈ range (n + 1)
+⊢ -1 * ((↑n - ↑y - ↑n) * ↑(Nat.choose (2 * n) (n - y))) =
+    -1 * ((↑n + 1 - 1 - ↑y - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - y)))
+n : ℕ
+⊢ ∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+      (↑n + 1 - 1 - ↑n - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - n)) =
+    -1 *
+      (∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+        (↑n + 1 - 1 - ↑n - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - n)))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n x : ℕ
+h : x ∈ range (n + 1)
+⊢ -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+    -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+case e_f
+n : ℕ
+⊢ (fun x => -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)))) = fun x =>
+    -1 * ((↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)))
+no goals
+case e_a
+n x : ℕ
+hx : x ∈ range (n + 1)
+⊢ (↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x)) = (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n : ℕ
+⊢ ∑ i : Fin (n + 1), (↑n + 1 - 1 - ↑↑i - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - ↑i)) =
+    -1 * ∑ i : Fin (n + 1), (↑n + 1 - 1 - ↑↑i - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - ↑i))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n : ℕ
+⊢ ∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+      ∑ x in range 1, (↑n + 1 - 1 - ↑(n + x) - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - (n + x))) =
+    -1 *
+      (∑ x in range n, (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x)) +
+        ∑ x in range 1, (↑n + 1 - 1 - ↑(n + x) - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - (n + x))))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1),
+    -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) =
+      (↑n + 1 - 1 - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - x))
+n : ℕ
+⊢ Finset.sum (range (n + 1)) ?m.91164 = ∑ x in range (n + 1), ↑x * ↑(Nat.choose (2 * n) (n - x))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) = ?m.91164 x
+
+n : ℕ
+⊢ ℕ → ℝ
+n : ℕ
+⊢ Finset.sum (range (n + 1)) ?m.91164 =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) = ?m.91164 x
+
+n : ℕ
+⊢ ℕ → ℝ
+n : ℕ
+⊢ Finset.sum (range (n + 1)) ?m.91164 =
+    -1 * ∑ k in range (n + 1), (↑n + 1 - 1 - ↑k - ↑n) * ↑(Nat.choose (2 * n) (n + 1 - 1 - k))
+
+n : ℕ
+⊢ ∀ x ∈ range (n + 1), -1 * ((↑n - ↑x - ↑n) * ↑(Nat.choose (2 * n) (n - x))) = ?m.91164 x
+
+n : ℕ
+⊢ ℕ → ℝ
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+⊢ k * ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+⊢ ∑ x in range (n + 1), k * ((-1) ^ x * ↑(Nat.choose n x)) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+case zero
+k : ℤ
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ k = 0
+case zero
+k : ℤ
+this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝ this h3 : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ (if n = 0 then 1 else 0) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝ this : -1 ≠ 0
+⊢ k = 0
+case zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ ∀ x ∈ range (n + 1), (-1) ^ x * ↑(Nat.choose n x) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ Finset.sum (range (n + 1)) ?m.35716 = 0
+
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ ∀ x ∈ range (n + 1), (-1) ^ x * ↑(Nat.choose n x) = ?m.35716 x
+
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this : -1 ≠ 0
+⊢ ℕ → ℤ
+case zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝ : -1 ≠ 0
+h2 : zero ≠ 0
+this : True
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero.h
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ False
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝ : -1 ≠ 0
+h2 : zero ≠ 0
+this : True
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero.h
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ False
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : -1 ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝¹ this✝ this : -1 ≠ 0
+⊢ k = 0
+case zero
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝³ this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝³ this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝³ this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝³ this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ k = 0
+case zero
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ k = 0
+case zero
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case zero
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+h2 : zero ≠ 0
+⊢ ∑ k in range (zero + 1), (-1) ^ k * ↑(Nat.choose zero k) = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝² this✝¹ this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+k : ℤ
+n : ℕ
+h2 : n ≠ 0
+this✝² this✝¹ this✝ this : -1 ≠ 0
+⊢ ∑ k in range (n + 1), (-1) ^ k * ↑(Nat.choose n k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ Finset.sum (range (succ n + 1)) ?m.58628 = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.58628 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case pos
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+
+case neg
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : ¬k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ (if n + 1 = 0 then 1 else 0) = 0
+case succ.h
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ Finset.sum (range (succ n + 1)) ?m.58628 = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.58628 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ.h
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.58628 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ Finset.sum (range (succ n + 1)) ?m.59690 = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.59690 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case pos
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+
+case neg
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : ¬k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ (if n + 1 = 0 then 1 else 0) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ Finset.sum (range (succ n + 1)) ?m.60099 = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.60099 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case pos
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+
+case neg
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : ¬k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ (if n + 1 = 0 then 1 else 0) = 0
+case neg
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : ¬k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ k = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ Finset.sum (range (succ n + 1)) ?m.64664 = 0 ∨ k = 0
+
+case succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ∀ x ∈ range (succ n + 1), (-1) ^ x * ↑(Nat.choose (succ n) x) = ?m.64664 x
+
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+⊢ ℕ → ℤ
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+case pos
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+
+case neg
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ n ≠ 0
+h3 : ¬k = 0
+⊢ ∑ k in range (succ n + 1), (-1) ^ k * ↑(Nat.choose (succ n) k) = 0 ∨ k = 0
+case succ.zero
+k : ℤ
+this✝ this : -1 ≠ 0
+h2 : succ zero ≠ 0
+⊢ ∑ k in range (succ zero + 1), (-1) ^ k * ↑(Nat.choose (succ zero) k) = 0 ∨ k = 0
+
+case succ.succ
+k : ℤ
+this✝ this : -1 ≠ 0
+n : ℕ
+h2 : succ (succ n) ≠ 0
+⊢ ∑ k in range (succ (succ n) + 1), (-1) ^ k * ↑(Nat.choose (succ (succ n)) k) = 0 ∨ k = 0
+n : ℕ
+⊢ ∑ m in range (n + 1), (-1) ^ m * ↑(Nat.choose n m) = 0
+
+case hnc
+n : ℕ
+⊢ ¬n = 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case zero
+⊢ ∑ m in range (zero + 1), (-1) ^ m * ↑(Nat.choose zero m) = if zero = 0 then 1 else 0
+
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ : ℕ
+⊢ (if n✝ + 1 = 0 then 1 else 0) = 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ : ℕ
+⊢ ∑ m in range (succ n✝ + 1), (-1) ^ m * ↑(Nat.choose (succ n✝) m) = if succ n✝ = 0 then 1 else 0
+case succ
+n✝ y : ℕ
+x✝ : y ∈ range (succ n✝ + 1)
+⊢ (-1) ^ y * ↑(Nat.choose (succ n✝) y) = 0
+case succ
+n✝ m : ℕ
+h : m ∈ range (succ n✝ + 1)
+⊢ (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ : ℕ
+⊢ Finset.sum (range (succ n✝ + 1)) ?m.27505 = 0
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.27505 x
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+case succ
+n✝ : ℕ
+⊢ ∑ x in range (n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) + (-1) ^ (n✝ + 1) * ↑(Nat.choose (succ n✝) (n✝ + 1)) = 0
+no goals
+case succ
+n✝ : ℕ
+⊢ ∑ x in range (n✝ + 1), ?succ.f x + ?succ.f (n✝ + 1) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ : ℕ
+⊢ (if n✝ + 1 = 0 then 1 else 0) = 0
+case succ
+n✝ y : ℕ
+x✝ : y ∈ range (succ n✝ + 1)
+⊢ (-1) ^ y * ↑(Nat.choose (succ n✝) y) = 0
+case succ
+n✝ m : ℕ
+h : m ∈ range (succ n✝ + 1)
+⊢ (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ : ℕ
+⊢ Finset.sum (range (succ n✝ + 1)) ?m.29891 = 0
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.29891 x
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+case succ
+n✝ : ℕ
+⊢ ∑ x in range (n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) + (-1) ^ (n✝ + 1) * ↑(Nat.choose (succ n✝) (n✝ + 1)) = 0
+no goals
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∑ x in range (n✝ + 1), ?succ.f x + ?succ.f (n✝ + 1) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ : ℕ
+⊢ ∑ x in range (succ n✝), ?succ.f x + ∑ x in range 1, ?succ.f (succ n✝ + x) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ : ℕ
+⊢ ∑ x in range n✝, ?succ.f x + ?succ.f n✝ + ?succ.f (n✝ + 1) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ k : ℕ
+hk : k ∈ range (succ n✝ + 1)
+⊢ ?m.30622 k = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+a✝ : x ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+h : x ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x✝ : ℕ
+a✝ : x✝ ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x✝ = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x < succ n✝ + 1, ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+⊢ x ∈ range (succ n✝ + 1) → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x✝ : ℕ
+⊢ x✝ ∈ range (succ n✝ + 1) → ?m.30622 x✝ = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∑ x in range n✝, ?succ.f x + ?succ.f n✝ + ?succ.f (n✝ + 1) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ : ℕ
+⊢ ∑ x in range n✝, ?succ.f x + ?succ.f n✝ + ?succ.f (succ n✝ + 0) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+hx : x < succ n✝ + 1
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+⊢ x ≤ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+⊢ x ≤ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x✝ : ℕ
+⊢ x✝ ≤ n✝ + 1 → ?m.30622 x✝ = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∑ x in range n✝, ?succ.f x + ?succ.f n✝ + ∑ x in range 1, ?succ.f (succ n✝ + x) = 0
+
+case succ.f
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?succ.f x
+case succ
+n✝ x : ℕ
+⊢ x < succ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+h : x ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+⊢ x < succ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+⊢ x ≤ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+h : x < succ n✝ + 1
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+⊢ x ≤ n✝ + 1 → ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ x : ℕ
+h : x < succ n✝ + 1
+⊢ ?m.30622 x = 0
+
+n✝ : ℕ
+⊢ ℕ → ℤ
+
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = ?m.30622 x
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x ∈ range (succ n✝ + 1), (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ.zero
+n✝ : ℕ
+⊢ zero ∈ range (succ n✝ + 1) → (-1) ^ zero * ↑(Nat.choose (succ n✝) zero) = 0
+
+case succ.succ
+n✝¹ n✝ : ℕ
+⊢ succ n✝ ∈ range (succ n✝¹ + 1) → (-1) ^ succ n✝ * ↑(Nat.choose (succ n✝¹) (succ n✝)) = 0
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x < succ n✝ + 1, (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ.zero
+n✝ : ℕ
+⊢ zero ∈ range (succ n✝ + 1) → (-1) ^ zero * ↑(Nat.choose (succ n✝) zero) = 0
+
+case succ.succ
+n✝¹ n✝ : ℕ
+⊢ succ n✝ ∈ range (succ n✝¹ + 1) → (-1) ^ succ n✝ * ↑(Nat.choose (succ n✝¹) (succ n✝)) = 0
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x < succ n✝ + 1, (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ.zero
+n✝ : ℕ
+⊢ zero ∈ range (succ n✝ + 1) → (-1) ^ zero * ↑(Nat.choose (succ n✝) zero) = 0
+
+case succ.succ
+n✝¹ n✝ : ℕ
+⊢ succ n✝ ∈ range (succ n✝¹ + 1) → (-1) ^ succ n✝ * ↑(Nat.choose (succ n✝¹) (succ n✝)) = 0
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x < succ n✝ + 1, (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ.zero
+n✝ : ℕ
+⊢ zero ∈ range (succ n✝ + 1) → (-1) ^ zero * ↑(Nat.choose (succ n✝) zero) = 0
+
+case succ.succ
+n✝¹ n✝ : ℕ
+⊢ succ n✝ ∈ range (succ n✝¹ + 1) → (-1) ^ succ n✝ * ↑(Nat.choose (succ n✝¹) (succ n✝)) = 0
+case succ
+n✝ x : ℕ
+hx : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ : ℕ
+⊢ ∀ x < succ n✝ + 1, (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑(Nat.choose (succ n✝) i) = 0
+case succ
+n✝ m : ℕ
+hm : m ∈ range (succ n✝ + 1)
+⊢ (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ x✝ : ℕ
+a✝ : x✝ ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x✝ * ↑(Nat.choose (succ n✝) x✝) = 0
+case succ
+n✝ x : ℕ
+h : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+hx : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ x : ℕ
+h : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑0 = 0
+
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ succ n✝ < i
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑(Nat.choose (succ n✝) i) = 0
+case succ
+n✝ m : ℕ
+hm : m ∈ range (succ n✝ + 1)
+⊢ (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ x✝ : ℕ
+a✝ : x✝ ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x✝ * ↑(Nat.choose (succ n✝) x✝) = 0
+case succ
+n✝ x : ℕ
+h : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+hx : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ x : ℕ
+h : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑0 = 0
+
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ succ n✝ < i
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑(Nat.choose (succ n✝) i) = 0
+case succ
+n✝ m : ℕ
+hm : m ∈ range (succ n✝ + 1)
+⊢ (-1) ^ m * ↑(Nat.choose (succ n✝) m) = 0
+case succ
+n✝ x✝ : ℕ
+a✝ : x✝ ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x✝ * ↑(Nat.choose (succ n✝) x✝) = 0
+case succ
+n✝ x : ℕ
+h : x ∈ range (succ n✝ + 1)
+⊢ (-1) ^ x * ↑(Nat.choose (succ n✝) x) = 0
+case succ
+n✝ x : ℕ
+hx : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ x : ℕ
+h : x < succ n✝ + 1
+⊢ (-1) ^ x = 0 ∨ Nat.choose (succ n✝) x = 0
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑0 = 0
+
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ succ n✝ < i
+case succ
+n✝ i : ℕ
+a✝ : i ∈ range (succ n✝ + 1)
+⊢ (-1) ^ i * ↑(Nat.choose (succ n✝) i) = 0

@@ -35,12 +35,13 @@ from Lean4Gym import *
 import traceback
 # TACRIC_NUMBER = 8
 MAX_ROUND_NUMBER = 10
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0" 
 
 model_name_or_path = "/home/wanglei/AAAI/lean_ATG/model/pythia2.8b_choose"
 
 model = vllm.LLM(
     model=model_name_or_path,
-    tensor_parallel_size=2,
+    tensor_parallel_size=1,
     trust_remote_code=True,
     gpu_memory_utilization=0.8,
     dtype='float16'
@@ -96,6 +97,8 @@ def generate_vllm(prompt, model, tokenizer, temperatures, num_samples, stop, max
 
 def encode_state(state, feature_size):
     # state = str([str(sublist) for sublist in state])
+    if(state is None):
+        state = "None"
     encode_state = [ord(char) for char in state]
     if(len(encode_state)<=feature_size):
         encode_state += [0]*(feature_size-len(encode_state))  #list
@@ -228,8 +231,11 @@ class Node(object):
         return 0
   
   def proof(self,state,tac,lean):
+    try:
       result = lean.run_tactic(state, [tac])
-      return result
+    except:
+      return state
+    return result
 
   def get_next_state_with_random_choice(self, lean, index):  ############# 根据当前state输入大模型，获取策略list后，随机选择其中一个策略，返回执行该随机策略后的状态
     # if(self.state==[]):
@@ -338,7 +344,7 @@ class MCTS:
       encodestate = encode_state(node.state.getTacticState(), self.args['feature_size'])
       encodetactic = encode_tactic(new_node.tac, self.args['feature_size'])
       input_policy = encodestate + encodetactic
-      input_policy = torch.FloatTensor(np.array(input_policy).astype(np.float64))
+      input_policy = torch.FloatTensor(np.array(input_policy).astype(np.float64)).to(self.device)
       new_node.prob = float(self.policy_model(input_policy))  # 返回的应该不是值，而是数组？
       #########################
       node.add_child(new_node)
@@ -421,7 +427,7 @@ class MCTS:
           reward = 1
         else:
           encodestate = encode_state(expand_node.state.getTacticState(), self.args['feature_size'])
-          input_value = torch.FloatTensor(np.array(encodestate).astype(np.float64))
+          input_value = torch.FloatTensor(np.array(encodestate).astype(np.float64)).to(self.device)
           reward = float(self.value_model(input_value))
 
         # 3. Update all passing nodes with reward
@@ -455,7 +461,7 @@ class MCTS:
           reward = 1
         else:
           encodestate = encode_state(expand_node.state.getTacticState(), self.args['feature_size'])
-          input_value = torch.FloatTensor(np.array(encodestate).astype(np.float64))
+          input_value = torch.FloatTensor(np.array(encodestate).astype(np.float64)).to(self.device)
           reward = float(self.value_model(input_value))
         
 
@@ -463,38 +469,19 @@ class MCTS:
         self.backup(expand_node, reward)
 
         if(expand_node.new): #生成了新定理, 填补证明步骤
-          # name = "new" + str(i)
-          # path = []  #新定理所用策略
-          # unused_list = expand_node.state[:-1]
           
-          # new_node = copy.copy(expand_node)
-          # trans_assertion,trans_proof = assertion_proof_trans_to_same_v(mm,expand_node.assersion,path,symbol_dict)
-          
-          # if is_right_order(trans_assertion,symbol_dict):
-          #   while new_node.parent is not None:
-          #     if(new_node.state == unused_list):
-          #       break
-          #     path.append(new_node.tac)
-          #     new_node = new_node.parent
-          #   path.reverse()
-            
-          #   trans_assertion,trans_proof = assertion_proof_trans_to_same_v(mm,expand_node.assersion,path,symbol_dict)
-          #   expand_node.path = trans_proof
-          #   expand_node.assersion = trans_assertion
-          #   # assersions = add_new_assertion_to_assertions(trans_assertion,assersions,symbol_dict)
-          
-            new_theorems = generate_theorem(expand_node)
-            # print('new_theorem:',new_theorem)
+          new_theorems = generate_theorem(expand_node)
+          # print('new_theorem:',new_theorem)
 
-            outputs.append(new_theorems)
+          outputs.append(new_theorems)
 
-            with open('out.json', 'a') as file:
-              json.dump(new_theorems, file)
-              file.write('\n')                      
-            count += 1
-            
-            if(count>=self.args['max_count']):
-              break
+          with open('out.json', 'a') as file:
+            json.dump(new_theorems, file)
+            file.write('\n')                      
+          count += 1
+          
+          if(count>=self.args['max_count']):
+            break
 
       return outputs
 
